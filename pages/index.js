@@ -5,6 +5,7 @@ import Results from "../components/Results";
 import requests from "../utils/requests";
 
 export default function Home({ results }) {
+  console.log(results);
   return (
     <div className="min-h-screen bg-[#06202A] text-gray-300">
       <Head>
@@ -29,25 +30,11 @@ export async function getServerSideProps(context) {
     `https://api.themoviedb.org/3${
       requests[genre]?.url || requests.fetchTrending.url
     }`
-  ).then((res) => {
-    if (res != null) {
-      res.json();
-    } else {
-      return null;
-    }
-  });
+  ).then((res) => res.json());
 
-  if (request != null) {
-    return {
-      props: {
-        results: request.results,
-      },
-    };
-  } else {
-    return {
-      props: {
-        results: [{ id: 1, title: "test" }],
-      },
-    };
-  }
+  return {
+    props: {
+      results: request.results,
+    },
+  };
 }
