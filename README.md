@@ -3,8 +3,15 @@
 # Visit
 [Demo](https://nextjs-tvshows.vercel.app/)
 
+## About
+Website that uses [The Movie Database API](https://www.themoviedb.org/) to fetch trending, top rated, action movies and more.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Technologies used
+* NextJS
+* Tailwind CSS
+* HeroIcon
 
 ## Getting Started
 
